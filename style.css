@@ -1,0 +1,149 @@
+/* Общие стили */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    background-color: #0f172a;
+    color: #f1f5f9;
+    line-height: 1.6;
+  }
+  
+  header {
+    background-color: #1e293b;
+    padding: 1rem 2rem;
+  }
+  
+  /* Базовые стили для всего сайта */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+  }
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  .menu {
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
+    padding-left: 0;
+  }
+  
+  #language-switcher {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+  }
+
+  nav h1 {
+    font-size: 1.5rem;
+  }
+  
+  nav ul {
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
+  }
+  
+  nav a {
+    text-decoration: none;
+    color: #f1f5f9;
+    transition: color 0.3s;
+  }
+  
+  nav a:hover {
+    color: #38bdf8;
+  }
+
+  section {
+    padding: 4rem 2rem;
+  }
+  
+  #hero {
+    text-align: center;
+    padding-top: 6rem;
+  }
+  
+  #hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  #hero p {
+    font-size: 1.2rem;
+    color: #94a3b8;
+  }
+  
+  #skills ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    list-style: none;
+    margin-top: 1rem;
+  }
+  
+  #skills li {
+    background-color: #1e293b;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+  }
+  
+  .project-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+  
+  .project-list div {
+    background-color: #1e293b;
+    padding: 1rem;
+    border-radius: 10px;
+  }
+  
+  #contact p {
+    font-size: 1rem;
+  }
+  #language-switcher button:hover {
+    transform: scale(1.2);
+    cursor: pointer;
+  }
+  #language-switcher button {
+    transition: transform 0.2s ease;
+  }
+
+  .social-links {
+    margin-top: 1rem;
+    display: flex;
+    gap: 1.5rem;
+  }
+  
+  .social-links a {
+    color: #f1f5f9;
+    transition: color 0.3s ease;
+    display: flex;
+    align-items: center;
+  }
+  
+  .social-links a svg {
+    width: 24px;
+    height: 24px;
+    fill: currentColor;
+  }
+  
+  .social-links a:hover {
+    color: #38bdf8;
+  }
+  
+     
