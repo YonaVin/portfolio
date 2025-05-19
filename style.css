@@ -17,8 +17,10 @@
   }
   
   header {
-    background-color: #1e293b;
+    background-color: transparent;
     padding: 1rem 2rem;
+        position: relative;
+        z-index: 1; /* выше формы */
   }
   
   /* Базовые стили для всего сайта */
@@ -26,6 +28,39 @@ body {
     margin: 0;
     font-family: 'Arial', sans-serif;
   }
+
+  #scrollToTop {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    padding: 0.75rem;
+    background-color: #38bdf8;
+    color: #0f172a;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(56, 189, 248, 0.4);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s, transform 0.3s;
+    z-index: 999;
+  }
+  
+  #scrollToTop svg {
+    width: 20px;
+    height: 20ыpx;
+  }
+  
+  #scrollToTop:hover {
+    transform: scale(1.1);
+  }
+  
+  #scrollToTop.show {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+
   nav {
     display: flex;
     justify-content: space-between;
@@ -68,21 +103,91 @@ body {
 
   section {
     padding: 4rem 2rem;
-  }
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }  
   
   #hero {
-    text-align: center;
-    padding-top: 6rem;
+    position: relative;
+  text-align: center;
+  padding: 6rem 1rem;
+  background: linear-gradient(#0f172a, #1e293b, #0f172a);
+  color: #f1f5f9;
+    z-index: 0; /* ниже header */
   }
   
+  
+  #hero::before {
+    content: "";
+    position: absolute;
+    top: -150px; /* больше, чтобы форма заходила под header */
+    left: -100px;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(56,189,248,0.4) 0%, transparent 70%);
+    z-index: -1; /* ниже всех элементов */
+    animation: float 8s infinite ease-in-out;
+    pointer-events: none;
+  }
+  
+  
+  #hero > * {
+    position: relative;
+    z-index: 1;
+  }
+  
+  @keyframes float {
+    0%, 100% { transform: translateY(0) }
+    50% { transform: translateY(20px) }
+  }
+  
+  
   #hero h2 {
-    font-size: 2.5rem;
+    font-size: 3rem;
     margin-bottom: 1rem;
+    color: #f1f5f9;
+  }
+  
+  .highlight {
+    color: #38bdf8;
   }
   
   #hero p {
     font-size: 1.2rem;
     color: #94a3b8;
+  }
+  
+  .typewriter {
+    font-size: 1.8rem;
+    font-family: 'Courier New', Courier, monospace;
+    color: #f1f5f9;
+    width: 30ch;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid #38bdf8;
+    animation: typing 3s steps(30), blink 0.5s step-end infinite alternate;
+    margin: 0 auto;
+  }
+  
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 30ch }
+  }
+  
+  @keyframes blink {
+    from { border-color: transparent }
+    to { border-color: #38bdf8 }
+  }
+  
+  
+
+  #about .container {
+    max-width: 1000px; /* или 600px — на вкус */
+    margin: 0 auto; /* центрирует по горизонтали */
+    padding: 0 1rem; /* небольшой отступ по краям */
+    text-align: center; /* или justify, если хочешь выравнивание по ширине */
   }
   
   #skills ul {
@@ -99,18 +204,62 @@ body {
     border-radius: 6px;
   }
   
-  .project-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
-    margin-top: 2rem;
-  }
-  
-  .project-list div {
-    background-color: #1e293b;
-    padding: 1rem;
-    border-radius: 10px;
-  }
+ #projects {
+  padding: 4rem 2rem;
+  background-color: #1e293b;
+  text-align: center;
+}
+
+#projects h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: #f1f5f9;
+}
+
+.project-grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.project-card {
+  background: #0f172a;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 20px rgba(56, 189, 248, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  color: #f1f5f9;
+  border: 1px solid transparent;
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 30px rgba(56, 189, 248, 0.3);
+  border-color: #38bdf8;
+}
+
+.project-card h3 {
+  margin-bottom: 0.5rem;
+  font-size: 1.5rem;
+  color: #38bdf8;
+}
+
+.project-card p {
+  margin-bottom: 1rem;
+  color: #cbd5e1;
+}
+
+.project-card a {
+  color: #38bdf8;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.project-card a:hover {
+  color: #0ea5e9;
+}
+
   
   #contact p {
     font-size: 1rem;
@@ -123,11 +272,25 @@ body {
     transition: transform 0.2s ease;
   }
 
-  .social-links {
-    margin-top: 1rem;
-    display: flex;
-    gap: 1.5rem;
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    text-align: left;
   }
+  
+  #social-link {
+    margin-top: 2rem;
+    padding: 1rem 2rem;
+    text-align: left; /* отключает центрирование текста */
+  }
+  
+  .social-links {
+    display: flex;
+    justify-content: flex-start; /* ВЫРАВНИВАЕТ ИКОНКИ СЛЕВА */
+    align-items: center;
+    gap: 1.5rem;
+  }  
   
   .social-links a {
     color: #f1f5f9;
@@ -136,14 +299,87 @@ body {
     align-items: center;
   }
   
-  .social-links a svg {
+  .social-links a:hover {
+    color: #38bdf8;
+  }
+  
+  .social-links svg {
     width: 24px;
     height: 24px;
     fill: currentColor;
   }
   
-  .social-links a:hover {
+  .social-links img {
+    width: 26px;
+    height: 26px;
+    filter: invert(100%); /* белый Notion-логотип для тёмного фона */
+    transition: filter 0.3s ease;
+  }
+  
+  .social-links img:hover {
+    filter: invert(59%) sepia(91%) saturate(408%) hue-rotate(164deg) brightness(102%) contrast(95%);
+  }  
+  .text-icon {
+    color: #f1f5f9;
+    font-size: 24px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .text-icon:hover {
     color: #38bdf8;
   }
   
-     
+  
+  .contact-container {
+  width: 100%;
+  max-width: 600px; /* ширина формы */
+  margin-top: 1rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto; /* центрирует форму */
+}
+
+label{
+display: flex;
+flex-direction: column;
+gap: 0.2rem;
+align-items: flex-start;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 0.5rem;
+  border-radius: 8px;
+  border: 1px solid #334155;
+  background-color: #334155;
+  color: #f1f5f9;
+font-size: 1.2rem;
+}
+
+textarea {
+  min-height: 150px;
+  resize: vertical;
+}
+
+button[type="submit"] {
+  padding: 0.75rem;
+  background-color: #38bdf8;
+  color: #0f172a;
+    font-size: 1.2rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #0ea5e9;
+}
