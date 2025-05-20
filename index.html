@@ -6,6 +6,10 @@
   <title>Alena's Portfolio</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="icon" href="moto.png" type="image/png" />
+  <!-- Devicon -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+<!-- Font Awesome (для Notion, Slack, Jira) -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
 
@@ -50,38 +54,82 @@
   
 
   <section id="skills">
-    <h2 data-i18n="skills_title">Skills</h2>
-    <ul>
-      <li>HTML</li>
-      <li>CSS</li>
-      <li>JavaScript</li>
-      <li>Figma</li>
-      <li>Adobe Creative</li>
-      <!-- Добавим ещё -->
-    </ul>
-  </section>
+      <h2 data-i18n="skills_title">Skills</h2>
+      <h3 data-i18n="skills_text">🧠 Knowledge</h3>
+      <ul class="skills-list">
+        <li data-i18n="skills1">HTML5 / CSS3 / Flexbox / Grid</li>
+        <li data-i18n="skills2">JavaScript (ES6+)</li>
+        <li data-i18n="skills3">Git & GitHub</li>
+        <li data-i18n="skills4">UI/UX principles</li>
+        <li data-i18n="skills5">Responsive Web Design</li>
+        <li data-i18n="skills6">Web Accessibility (a11y) Basics</li> 
+        <li data-i18n="skills7">SEO Basics</li>
+        <li data-i18n="skills8">Basic knowledge of React</li>
+      </ul>   
+      <h3 data-i18n="tools_text">🛠️ Tools</h3>
+      <ul class="tools-list">
+        <li><i class="devicon-figma-plain colored"></i> Figma</li>
+        <li><i class="devicon-photoshop-plain colored"></i> Adobe Photoshop</li>
+        <li><i class="devicon-illustrator-plain colored"></i> Adobe Illustrator</li>
+        <li><i class="fa-brands fa-notion"></i><img src="https://upload.wikimedia.org/wikipedia/commons/e/e9/Notion-logo.svg" alt="Notion Icon" width="30" height="30" /> Notion</li>
+        <li><i class="fa-brands fa-slack"></i> Slack</li>
+        <li><i class="fa-brands fa-jira"></i> Jira</li>
+        <li><i class="devicon-vscode-plain colored"></i> VS Code</li>
+      </ul>
+    
+      <h3 data-i18n="skills_text2">✨ Soft Skills</h3>
+      <ul class="skills-list">
+        <li data-i18n="skills_list1">Teamwork & Communication</li>
+      <li data-i18n="skills_list2">Problem Solving</li>
+      <li data-i18n="skills_list3">Time management</li>
+      <li data-i18n="skills_list4">Adaptability</li>
+      <li data-i18n="skills_list5">Attention to Detail</li>
+      <li data-i18n="skills_list6">Empathy</li>
+      <li data-i18n="skills_list7">Creativity & Visual Thinking</li>
+      </ul>
+    </section>
 
-  <section id="projects">
-      <section id="projects">
-        <h2 data-i18n="projects_title">Projects</h2>
-        <div class="project-grid">
-          <div class="project-card">
-            <h3>Portfolio Website</h3>
-            <p ata-i18n="project1_desc">A personal site to showcase my work as a designer and developer.</p>
-            <a href="#" target="_blank">View Project</a>
-          </div>
-          <div class="project-card">
-            <h3>Landing Page</h3>
-            <p ata-i18n="project2_desc">Responsive landing page with smooth scroll and dark mode.</p>
-            <a href="#" target="_blank">View Project</a>
-          </div>
-          <div class="project-card">
-            <h3>To-Do App</h3>
-            <p ata-i18n="project3_desc">A JavaScript-based task tracker with local storage support.</p>
-            <a href="#" target="_blank">View Project</a>
-          </div>
-        </div>     
-  </section>
+    <section id="projects">
+      <h2 data-i18n="projects_title">Projects</h2>
+      <div class="projects-grid">
+        <div class="project-card">
+          <img src="images/project1-thumbnail.jpg" alt="Project 1" />
+          <h3>Project Name 1</h3>
+          <p>Short description about the project.</p>
+          <a href="../projects/project1.html" class="view-more-btn" data-i18n="view_more">View More</a>
+        </div>
+        <div class="project-card">
+          <img src="images/project2-thumbnail.jpg" alt="Project 2" />
+          <h3>Project Name 2</h3>
+          <p>Short description about the project.</p>
+          <a href="../projects/project2.html" class="view-more-btn" data-i18n="view_more">View More</a>
+        </div>
+        <div class="project-card">
+          <img src="images/project3-thumbnail.jpg" alt="Project 3" />
+          <h3>Project Name 3</h3>
+          <p>Short description about the project.</p>
+          <a href="../projects/project3.html" class="view-more-btn" data-i18n="view_more">View More</a>
+        </div>
+        <div class="project-card">
+          <img src="images/project4-thumbnail.jpg" alt="Project 4" />
+          <h3>Project Name 4</h3>
+          <p>Short description about the project.</p>
+          <a href="../projects/project4.html" class="view-more-btn" data-i18n="view_more">View More</a>
+        </div>
+        <div class="project-card">
+          <img src="images/project5-thumbnail.jpg" alt="Project 5" />
+          <h3>Project Name 5</h3>
+          <p>Short description about the project.</p>
+          <a href="../projects/project5.html" class="view-more-btn" data-i18n="view_more">View More</a>
+        </div>
+        <div class="project-card">
+          <img src="images/project6-thumbnail.jpg" alt="Project 6" />
+          <h3>Project Name 6</h3>
+          <p>Short description about the project.</p>
+          <a href="../projects/project6.html" class="view-more-btn" data-i18n="view_more">View More</a>
+        </div>
+      </div>
+    </section>    
 
   <section id="contact">
         <h2 data-i18n="contact_title">Contact Me</h2>
