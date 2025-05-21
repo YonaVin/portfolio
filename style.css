@@ -31,6 +31,8 @@ body {
 
   #scrollToTop {
     position: fixed;
+    width: 50px;
+    height: 50px;
     bottom: 2rem;
     right: 2rem;
     padding: 0.75rem;
@@ -48,7 +50,7 @@ body {
   
   #scrollToTop svg {
     width: 20px;
-    height: 20ыpx;
+    height: 20px;
   }
   
   #scrollToTop:hover {
@@ -259,7 +261,7 @@ body {
 }
 #projects p {
   font-size: 1.2rem;
-  color: #94a3b8;
+  color: #606d81;
 }
 
 .projects-grid {
@@ -271,7 +273,7 @@ body {
 }
 
 .project-card {
-  background-color: #fff;
+  background-color: #e6ebf5;
   width: 380px;
   height: 460px;
   border-radius: 1rem;
