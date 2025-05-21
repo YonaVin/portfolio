@@ -3,34 +3,69 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Detailed overview of Project 6 – goal, technologies, problems solved, and visual gallery." />
-  <title>Project 6 - Portfolio</title>
-  <link rel="stylesheet" href="../css/project.css" />
+  <meta name="description" content="Detailed overview of Project 2 – goal, technologies, problems solved, and visual gallery." />
+  <title>Project 2</title>
+  <link rel="stylesheet" href="../css/project6.css" />
   <link rel="icon" type="image/png" href="images/favicon.png" />
 </head>
 <body>
   <header class="project-header">
     <div class="container">
-      <a href="../index.html" class="back-button">← Back to Home</a>
+      <a href="../main/index.html" class="back-button">← Back to Home</a>
+    </div>
+    <div id="language-switcher">
+      <button onclick="setLanguage('en')" style="background: none; border: none; font-size: 24px;">🇬🇧</button>
+      <button onclick="setLanguage('ru')" style="background: none; border: none; font-size: 24px;">🇷🇺</button>
+      <button onclick="setLanguage('ko')" style="background: none; border: none; font-size: 24px;">🇰🇷</button>
     </div>
   </header>
 
   <main class="project-detail container">
-    <h1>Project Name 6</h1>
+    <h1>Datamon</h1>
     <p class="project-description">
-      This is a detailed description of the project. You can explain what the goal was,
-      what tools/technologies you used, what problems you solved, and what you learned.
-    </p>
+      Data extraction, analysis, visualization, quality control, ML modeling, data clustering, etc.
+      Provide data environment construction solutions.</p>
 
+      <h2>Building a data environment</h2>
+      <ul>
+        <li>Data Quality Management</li>
+        <li>UI/UX optimization</li>
+        <li>Data analysis</li>
+        <li>Data Clustering</li>
+        <li>ML modeling</li>
+        <li>Data visualization</li> 
+        <li>Data extraction</li>
+      </ul>
+
+    <h2 class="project-description">Design Highlights</h2>
+    <p>Clean, minimal dashboard design in warm blues and whites. Soft blue accents, clear typography, spacious layout. Modern, calm, and user-friendly.</p>
+
+    <h2>Links</h2>
+    <li>
+      Website: <a href="https://www.driven.co.kr/page/sub02_5" target="_blank">Datamon</a>
+    </li>
+  
     <h2>Gallery</h2>
     <div class="project-gallery">
-      <img src="images/project6-1.jpg" alt="Screenshot 1 of Project 6" />
-      <img src="images/project6-2.jpg" alt="Screenshot 2 of Project 6" />
+      <img src="../main/datamon.png" alt="main app design" />
+      <img src="../projects/data1.png" alt="Employee service system UI" />
+      <img src="../projects/data2.png" alt="Employee service UI" />
+      <img src="../projects/data3.png" alt="Employee UI" />
     </div>
+    
+    <!-- Модальное окно -->
+    <div id="image-modal" class="modal">
+      <span class="close">&times;</span>
+      <img class="modal-content" id="modal-img" alt="Expanded image">
+    </div>
+    
   </main>
+  
 
   <footer class="project-footer container">
-    <p>&copy; 2025 Alëna | All rights reserved</p>
+    <p>&copy; 2025 Alyona | All rights reserved</p>
   </footer>
+
+  <script src="../projects/project6.js"></script>
 </body>
 </html>
