@@ -1,0 +1,171 @@
+/* Base styles */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  background-color: #ffffff;
+  color: #1040a7;
+  line-height: 1.6;
+}
+
+#language-switcher {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+/* Container */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* Header */
+.project-header {
+  background: #7da2f1;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Центрирует по горизонтали */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+}
+
+.project-header .container {
+  display: flex;
+  justify-content: left;
+  width: 100%;
+}
+
+
+.back-button {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+}
+
+
+.back-button:hover {
+  color: #1040a7;
+}
+
+/* Title and Headings */
+h1, h2 {
+  color: #1040a7;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+h2 {
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+  font-size: 1.8rem;
+  border-bottom: 2px solid #1040a7;
+  padding-bottom: 0.3rem;
+}
+
+/* Project Description */
+.project-description {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+  color: #1040a7;
+}
+
+/* List */
+ul {
+  padding-left: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+li {
+  margin-bottom: 0.5rem;
+  color: #1040a7;
+}
+
+/* Gallery */
+.project-gallery {
+  padding-top: 10px;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.project-gallery img {
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.project-gallery img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+}
+
+/* Модальное окно */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.85);
+}
+
+.modal-content {
+  display: block;
+  margin: 5% auto;
+  max-width: 90%;
+  max-height: 80vh;
+  border: 0px solid #000000;
+  border-radius: 10px;
+  box-shadow: 0 0 30px rgba(0,0,0,0.7);
+}
+
+.close {
+  position: absolute;
+  top: 25px;
+  right: 35px;
+  color: #ffffff;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover {
+  color: #1040a7;
+}
+
+li {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: 0.5rem;
+  color: #1040a7; /* тёмно-коричневый цвет для текста */
+}
+
+li a {
+  color: #1040a7; /* тёплый золотистый цвет для ссылок */
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+li a:hover,
+li a:focus {
+  color: #7d9bdb; /* светлый золотистый при наведении */
+  text-decoration: underline;
+}
+
+
+
