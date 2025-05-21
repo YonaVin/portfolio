@@ -4,33 +4,55 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Detailed overview of Project 2 – goal, technologies, problems solved, and visual gallery." />
-  <title>Project 2 - Portfolio</title>
-  <link rel="stylesheet" href="../css/project.css" />
+  <title>Project 2</title>
+  <link rel="stylesheet" href="../css/project2.css" />
   <link rel="icon" type="image/png" href="images/favicon.png" />
 </head>
 <body>
   <header class="project-header">
     <div class="container">
-      <a href="../index.html" class="back-button">← Back to Home</a>
+      <a href="../main/index.html" class="back-button">← Back to Home</a>
     </div>
   </header>
 
   <main class="project-detail container">
-    <h1>Project Name 2</h1>
+    <h1>SevenLuck Casino</h1>
     <p class="project-description">
-      This is a detailed description of the project. You can explain what the goal was,
-      what tools/technologies you used, what problems you solved, and what you learned.
+      SevenLuck Casino, operated by Grand Korean Leisure (a subsidiary of the Korean Tourism Organization), is one of Korea’s leading casinos for foreigners. The company approached us for a complete design rebrand and the development of a new set of digital products.
     </p>
-
+  
+    <h2>My Contributions</h2>
+    <ul>
+      <li>UI/UX design for a casino tablet app and mobile app</li>
+      <li>Design and frontend development for an employee service system</li>
+      <li>Creation of the Mypass app – an electronic passport for Korean and foreign guests</li>
+    </ul>
+  
+    <h2>Design Highlights</h2>
+    <p>
+      All designs were developed to align with the casino’s branding and client requirements. The tablet interface supports multiple languages and ensures usability for international guests. The Mypass application visually reflects a real passport, serving as a digital ID. The internal service program for employees was redesigned for a cleaner, more intuitive user experience.
+    </p>
+  
     <h2>Gallery</h2>
     <div class="project-gallery">
-      <img src="images/project2-1.jpg" alt="Screenshot 1 of Project 2" />
-      <img src="images/project2-2.jpg" alt="Screenshot 2 of Project 2" />
+      <img src="../main/sevenluck.png" alt="SevenLuck main app design" />
+      <img src="../projects/service.png" alt="Employee service system UI" />
+      <img src="../projects/mypass.png" alt="Mypass digital ID app UI" />
     </div>
+    
+    <!-- Модальное окно -->
+    <div id="image-modal" class="modal">
+      <span class="close">&times;</span>
+      <img class="modal-content" id="modal-img" alt="Expanded image">
+    </div>
+    
   </main>
+  
 
   <footer class="project-footer container">
-    <p>&copy; 2025 Alëna | All rights reserved</p>
+    <p>&copy; 2025 Alyona | All rights reserved</p>
   </footer>
+
+  <script src="../projects/project2.js"></script>
 </body>
 </html>
