@@ -272,6 +272,8 @@ body {
 
 .project-card {
   background-color: #fff;
+  width: 380px;
+  height: 460px;
   border-radius: 1rem;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
   padding: 1rem;
@@ -283,7 +285,8 @@ body {
 }
 
 .project-card img {
-  width: 100%;
+  width: 350px;
+  height: 200px;
   border-radius: 0.75rem;
   object-fit: cover;
   margin-bottom: 1rem;
