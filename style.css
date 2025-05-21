@@ -435,4 +435,93 @@ button[type="submit"]:hover {
   background-color: #0ea5e9;
 }
 
+/* Общие стили для мобильных устройств */
+@media (max-width: 768px) {
+  body {
+    font-size: 16px;
+  }
+
+  /* Навигация */
+  .navbar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .menu {
+    flex-direction: column;
+    padding: 0;
+    margin: 10px 0;
+  }
+
+  .menu li {
+    margin: 8px 0;
+  }
+
+  #language-switcher {
+    margin-top: 10px;
+  }
+
+  /* Герой секция */
+  #hero h2 {
+    font-size: 1.8rem;
+  }
+
+  #hero p.typewriter {
+    font-size: 1.2rem;
+  }
+
+  /* Секции с текстом */
+  section {
+    padding: 20px 15px;
+  }
+
+  /* Проекты - сделать в колонку */
+  .projects-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .project-card {
+    width: 100%;
+  }
+
+  .project-card img {
+    width: 100%;
+    height: auto;
+  }
+
+  /* Контактная форма */
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  form label {
+    margin-bottom: 15px;
+  }
+
+  form input,
+  form textarea {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  /* Соцсети */
+  .social-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+
+  /* Кнопка ScrollToTop */
+  #scrollToTop {
+    bottom: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+  }
+}
 
